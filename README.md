@@ -1,1 +1,3 @@
-# swen-101-project
+# SWEN-101 Project
+
+**Authors:** Haven Dobson, Charlie Gilliland, Katherine Loring
