@@ -9,3 +9,9 @@ div.search {
     flex-direction: inherit;
     align-items: inherit;
 }
+
+div.search > * {
+    display: inherit;
+    flex-direction: inherit;
+    align-items: inherit;
+}
