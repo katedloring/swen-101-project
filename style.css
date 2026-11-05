@@ -1,0 +1,11 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+div.search {
+    display: inherit;
+    flex-direction: inherit;
+    align-items: inherit;
+}
