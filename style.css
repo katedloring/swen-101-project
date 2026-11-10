@@ -2,7 +2,18 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: hotpink;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    background-image: url("background.webp");
+    background-blend-mode: lighten;
+    font-size: 20pt;
 }
+
+* {
+    font-family: inherit;
+    font-size: inherit;
+}
+
 
 div.search {
     display: inherit;
@@ -14,4 +25,18 @@ div.search > * {
     display: inherit;
     flex-direction: inherit;
     align-items: inherit;
+}
+
+@keyframes growShrink {
+  0%, 100% {
+    transform: scale(1.0) rotate(-10deg);
+  }
+  50% {
+    transform: scale(1.2) rotate(20deg);
+  }
+}
+
+h1 {
+    font-size: 100pt;
+    animation: growShrink 1s ease-in-out infinite;
 }
