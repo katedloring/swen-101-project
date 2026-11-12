@@ -40,3 +40,8 @@ h1 {
     font-size: 100pt;
     animation: growShrink 1s ease-in-out infinite;
 }
+
+button a {
+    text-decoration: none;
+    color: inherit;
+}
