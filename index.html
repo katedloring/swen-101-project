@@ -13,12 +13,12 @@
 
             <div>
                 <button type="submit">
-                    <a href="search">Search</a>
+                    <a id="search-link" href="search">Search</a>
                 </button>
 
-                <select>
-                    <option>by location</option>
-                    <option>by product</option>
+                <select id="search-selector" onchange="updateSearchLink()">
+                    <option value="by_product" selected>by product</option>
+                    <option value="by_location">by location</option>
                 </select>
             </div>
         </form>
@@ -33,5 +33,14 @@
             <a href="map">Map</a>
         </button>
     </nav>
+
+    <script>
+        function updateSearchLink() {
+            select = document.getElementById("search-selector");
+            document.getElementById("search-link").href = "search/" + select.value;
+        }
+
+        updateSearchLink();
+    </script>
 </body>
 </html>
