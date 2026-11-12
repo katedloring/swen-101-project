@@ -4,7 +4,7 @@ body {
     align-items: center;
     background-color: hotpink;
     font-family: "Comic Sans MS", "Comic Sans", cursive;
-    background-image: url("background.webp");
+    background-image: url("images/background.webp");
     background-blend-mode: lighten;
     font-size: 20pt;
 }
