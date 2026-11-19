@@ -8,15 +8,15 @@
     <h1>SnackQuest</h1>
 
     <div class="search">
-        <form>
-            <input type="text">
+        <form id="search-form" action="search/by_product">
+            <input type="text" id="search-input" oninput="updateSearchLink();">
 
             <div>
                 <button type="submit">
-                    <a id="search-link" href="search">Search</a>
+                    <a id="search-link" href="search/by_product">Search</a>
                 </button>
 
-                <select id="search-selector" onchange="updateSearchLink()">
+                <select id="search-selector" onchange="updateSearchLink(); clearSearchBox();">
                     <option value="by_product" selected>by product</option>
                     <option value="by_location">by location</option>
                 </select>
@@ -37,10 +37,16 @@
     <script>
         function updateSearchLink() {
             select = document.getElementById("search-selector");
-            document.getElementById("search-link").href = "search/" + select.value;
+            searchLink = "search/" + select.value + "?q=" + document.getElementById("search-input").value;
+            document.getElementById("search-link").href = searchLink;
+            document.getElementById("search-form").action = searchLink;
         }
 
         updateSearchLink();
+
+        function clearSearchBox() {
+            document.getElementById("search-input").value = "";
+        }
     </script>
 </body>
 </html>
